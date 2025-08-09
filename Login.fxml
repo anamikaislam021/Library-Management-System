@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane fx:id="loginPane" prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: linear-gradient(to bottom, #6a11cb, #2575fc);"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="library.LoginController">
+
+    <children>
+        <VBox spacing="15.0" alignment="CENTER" layoutX="150" layoutY="100">
+            <Label text="Library Login" style="-fx-font-size: 24px; -fx-text-fill: white;" />
+            <TextField fx:id="usernameField" promptText="Username" />
+            <PasswordField fx:id="passwordField" promptText="Password" />
+            <Button text="Login" onAction="#handleLogin" />
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane fx:controller="library.MemberController"
+            xmlns:fx="http://javafx.com/fxml" prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: linear-gradient(to right, #43cea2, #185a9d);">
+
+    <VBox spacing="10" alignment="CENTER" layoutX="50" layoutY="20" prefWidth="500">
+        <Label text="Member Management" style="-fx-font-size: 20px; -fx-text-fill: white;"/>
+
+        <HBox spacing="10">
+            <TextField fx:id="nameField" promptText="Name"/>
+            <TextField fx:id="emailField" promptText="Email"/>
+            <TextField fx:id="phoneField" promptText="Phone"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Button text="Add" onAction="#addMember" />
+            <Button text="Update" onAction="#updateMember" />
+            <Button text="Delete" onAction="#deleteMember" />
+            <Button text="Refresh" onAction="#loadMembers" />
+        </HBox>
+
+        <TableView fx:id="memberTable" prefHeight="200" prefWidth="500">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="nameCol" text="Name" prefWidth="150"/>
+                <TableColumn fx:id="emailCol" text="Email" prefWidth="150"/>
+                <TableColumn fx:id="phoneCol" text="Phone" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

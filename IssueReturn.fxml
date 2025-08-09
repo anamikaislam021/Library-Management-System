@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane fx:controller="library.IssueReturnController"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);">
+
+    <VBox spacing="10" alignment="CENTER" layoutX="50" layoutY="20" prefWidth="500">
+        <Label text="Issue / Return Books" style="-fx-font-size: 20px; -fx-text-fill: white;"/>
+
+        <HBox spacing="10">
+            <TextField fx:id="bookIdField" promptText="Book ID"/>
+            <TextField fx:id="memberIdField" promptText="Member ID"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Button text="Issue Book" onAction="#issueBook" />
+            <Button text="Return Book" onAction="#returnBook" />
+            <Button text="Refresh" onAction="#loadIssues" />
+        </HBox>
+
+        <TableView fx:id="issueTable" prefHeight="200" prefWidth="500">
+            <columns>
+                <TableColumn fx:id="idCol" text="Issue ID" prefWidth="60"/>
+                <TableColumn fx:id="bookIdCol" text="Book ID" prefWidth="80"/>
+                <TableColumn fx:id="memberIdCol" text="Member ID" prefWidth="80"/>
+                <TableColumn fx:id="issueDateCol" text="Issue Date" prefWidth="100"/>
+                <TableColumn fx:id="returnDateCol" text="Return Date" prefWidth="100"/>
+                <TableColumn fx:id="fineCol" text="Fine" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>
